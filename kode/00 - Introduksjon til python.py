@@ -203,17 +203,7 @@ print(int(string_variable_a) + int(string_variable_b)) # Vi summerer to variable
 # 
 # 1. Lag et program som regner ut **summen** av to tall som du skriver inn.
 
-# ## Løsningsforslag oppgave
 
-# In[ ]:
-
-
-tall_a = 0
-tall_b = 0
-while (True):
-    tall_a = input("Enter first number:")
-    tall_b = input("Enter second number:")
-    print(int(tall_a) + int(tall_b))
 
 
 # ## Bonus: Vi kaster terning
