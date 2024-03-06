@@ -3,8 +3,6 @@
 
 # ## Python turtle
 # Hva er python turtle, hvorfor python turtle?
-# 
-# NITO kveldskurs 6.mars 2024, Kristian Botnen
 
 # In[ ]:
 

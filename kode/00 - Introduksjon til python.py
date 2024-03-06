@@ -4,7 +4,6 @@
 # ## Introduksjon til python
 # Hva er python og hva kan det brukes til?
 # 
-# NITO kveldskurs 06.mars 2024, Kristian Botnen
 
 # ## Kalkulator
 
@@ -41,7 +40,7 @@ print(365 * 10 + 101)
 # ## Hva er en variabel?
 # En variabel i programmering beskriver en plass hvor vi kan lagre informasjon som tall, tekst, lister med mer. Vi kan også se på en variabel som en merkelapp til stedet hvor informasjonen er lagret.
 
-# In[2]:
+# In[ ]:
 
 
 # Vi kan lage en variabel på denne måten:
@@ -49,7 +48,7 @@ pirat = "Langemann"
 print(pirat)
 
 
-# In[3]:
+# In[ ]:
 
 
 # Vi kan endre innholdet i en variabel ved å tildele en ny verdi på samme måte som vi gjorde opprinnelig:
@@ -57,7 +56,7 @@ pirat = "Kaptein Sabeltann"
 print(pirat)
 
 
-# In[4]:
+# In[ ]:
 
 
 # Vi kan ha flere merkelapper som peker til den samme informasjonen:
@@ -65,7 +64,7 @@ kaptein = pirat
 print(kaptein)
 
 
-# In[5]:
+# In[ ]:
 
 
 # Det kan være lurt å navngi variablene våre slik at vi skjønner hva de skal brukes til:
@@ -73,7 +72,7 @@ antall_mynter = 200
 print(antall_mynter)
 
 
-# In[6]:
+# In[ ]:
 
 
 # Vi kan se hvilken type verdi en variabel peker til ved å bruke nøkkelordet type():
@@ -84,7 +83,7 @@ print(type(antall_mynter))
 # ## Bruke variabler
 # La oss bruke det vi har lært til nå.
 
-# In[9]:
+# In[ ]:
 
 
 antall_dager = 365
@@ -92,13 +91,6 @@ antall_produserte_mynter_dag = 10
 antall_ekstra_mynter = 101
 
 print(antall_dager * antall_produserte_mynter_dag + antall_ekstra_mynter)
-
-
-# In[13]:
-
-
-float_variabel = 1.1
-print(float_variabel)
 
 
 # Ved å bruke variabler kan vi enkelt endre verdier et sted, og så blir de nye verdiene tilgjengelig alle steder hvor variablene er brukt. Dette vil spare oss for mye manuell inntasting, som igjen sparer oss tid OG reduserer risikoen for å taste feil.
@@ -137,7 +129,7 @@ print(number_a * number_b * number_c * number_d * number_e)
 # ## Løkker
 # Maskinen er flink til å repetere ting. Vi skal her se på to forskjellige måter å repetere.
 
-# In[14]:
+# In[ ]:
 
 
 # Tilstandsløkke
@@ -147,7 +139,7 @@ while (i < 5):
     i = i + 1
 
 
-# In[24]:
+# In[ ]:
 
 
 # Telleløkke
@@ -158,7 +150,7 @@ for i in range(0, 5):
 # ## Inndata
 # La oss se hvordan vi kan gå frem for å gi dataen noe inndata.
 
-# In[25]:
+# In[ ]:
 
 
 inndata = ""
@@ -171,7 +163,7 @@ print("You told me to quit, so I did")
 # ## Typecasting
 # Vi ser på hvordan vi kan sjonglere mellom forskjellige typer.
 
-# In[28]:
+# In[ ]:
 
 
 string_variable_a = "1"
@@ -180,7 +172,7 @@ string_variable_b = "2"
 print(string_variable_a + string_variable_b) # Vi konkatinerer to variabler av type string.
 
 
-# In[29]:
+# In[ ]:
 
 
 string_variable_a = "1"
@@ -203,7 +195,17 @@ print(int(string_variable_a) + int(string_variable_b)) # Vi summerer to variable
 # 
 # 1. Lag et program som regner ut **summen** av to tall som du skriver inn.
 
+# ## Løsningsforslag oppgave
 
+# In[ ]:
+
+
+tall_a = 0
+tall_b = 0
+while (True):
+    tall_a = input("Enter first number:")
+    tall_b = input("Enter first number:")
+    print(int(tall_a) + int(tall_b))
 
 
 # ## Bonus: Vi kaster terning
@@ -213,7 +215,7 @@ print(int(string_variable_a) + int(string_variable_b)) # Vi summerer to variable
 # 
 # Vi skal også gjøre et forsøk på å bruke den offisielle dokumentasjonen: [https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html)
 
-# In[32]:
+# In[ ]:
 
 
 import random
@@ -226,7 +228,7 @@ print(random.randrange(1,7))
 print(random.randrange(1,7))
 
 
-# In[33]:
+# In[ ]:
 
 
 import random
@@ -242,7 +244,7 @@ egen_funksjon()
 egen_funksjon()
 
 
-# In[34]:
+# In[ ]:
 
 
 import random
@@ -269,4 +271,47 @@ egen_funksjon(6)
 # 1. Lag et program som ruller en terning 12 ganger.
 # 2. Lag et program som ruller en 12-sidet terning 6 ganger.
 # 2. Lag et program som ruller to terninger 6 ganger.
+
+# ## Løsningsforslag oppgaver
+
+# In[ ]:
+
+
+import random
+
+def egen_funksjon(antall_kast):
+    for i in range(0, antall_kast):
+        print(random.randrange(1,7))
+    
+egen_funksjon(12)
+
+
+# In[ ]:
+
+
+import random
+
+def egen_funksjon(antall_kast):
+    for i in range(0, antall_kast):
+        print(random.randrange(1,12))
+    
+egen_funksjon(6)
+
+
+# In[ ]:
+
+
+import random
+
+terning_a = 0
+terning_b = 0
+
+def egen_funksjon(antall_kast):
+    for i in range(0, antall_kast):
+        terning_a = random.randrange(1,7)
+        terning_b = random.randrange(1,7)
+        print("Kast #" + str(i) + ": Terning A - " + str(terning_a))
+        print("Kast #" + str(i) + ": Terning B - " + str(terning_b))
+    
+egen_funksjon(6)
 
