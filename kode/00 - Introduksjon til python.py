@@ -4,6 +4,7 @@
 # ## Introduksjon til python
 # Hva er python og hva kan det brukes til?
 # 
+# NITO kveldskurs 02.oktober 2024, Kristian Botnen
 
 # ## Kalkulator
 
@@ -17,7 +18,7 @@ print(100 / 20)
 # In[ ]:
 
 
-# Vi har en myntdupliseringsmaskin som kan lage ti nye mynter pr.dag. Hvor mange mynter har vi iløpet av et år?
+# Vi har en maskin som kan lage ti nye mynter pr.dag. Hvor mange mynter har vi iløpet av et år?
 print(365 * 10)
 
 
@@ -148,7 +149,7 @@ for i in range(0, 5):
 
 
 # ## Inndata
-# La oss se hvordan vi kan gå frem for å gi dataen noe inndata.
+# La oss se hvordan vi kan gå frem for å gi noe inndata.
 
 # In[ ]:
 
@@ -204,8 +205,107 @@ tall_a = 0
 tall_b = 0
 while (True):
     tall_a = input("Enter first number:")
-    tall_b = input("Enter first number:")
+    tall_b = input("Enter second number:")
     print(int(tall_a) + int(tall_b))
+
+
+# ## Logikk
+
+# In[ ]:
+
+
+alder = 18
+if alder > 18:
+    print("Du er myndig")
+else:
+    print("Du er ikke myndig")
+
+
+# In[ ]:
+
+
+alder = 18
+if alder >= 18:
+    print("Du er myndig")
+else:
+    print("Du er ikke myndig")
+
+
+# In[ ]:
+
+
+alder = 18
+if alder == 18:
+    print("Du er akkurat blitt myndig")
+elif alder > 18:
+    print("Du er verdensmester!")
+else:
+    print("Du er ikke myndig")
+
+
+# In[ ]:
+
+
+year = 2020
+if year == 2020 or year == 2021 or year == 2022:
+    print("Det handler mye om pandemi i nyhetene")
+else:
+    print("Det er ikke så veldig mye om pandemi i nyhetene")
+
+
+# In[ ]:
+
+
+betaling_1 = 10
+betaling_2 = 20
+betaling_3 = 30
+
+if betaling_1 > betaling_2 and betaling_1 > betaling_3:
+    print("Betaling 1 er størst")
+elif betaling_2 > betaling_1 and betaling_2 > betaling_3:
+    print("Betaling 2 er størst")
+elif betaling_3 > betaling_1 and betaling_3 > betaling_2:
+    print("Betaling 3 er størst")
+else:
+    print("Hva?")
+
+
+# ## Oppsummering 3
+# Vi har sett på hvordan vi kan sjekke om et uttrykk er sant eller ikke. Vi har også sett hvordan vi kan utføre forskjellige kodeblokker basert på evalueringen av uttrykket.
+# 
+# ## Oppgave 3 forberedelser
+# 1. Gå til: https://app.edublocks.org/
+# 2. Registrer en bruker og logg inn.
+# 3. Trykk "Get started" og trykk "Python3".
+# 4. Huk av for "text only" og navn "Python prosjekt 3".
+# 5. Trykk "Start coding".
+# 
+# ## Oppgave 3 - 15 minutter
+# 
+# 1. Lag et program som tar et heltall, 1 - 7 og skriver ut hvilken ukedag det er. 1 = mandag, 2 = tirsdag, og så videre.
+
+# ## Løsningsforslag oppgave
+
+# In[ ]:
+
+
+ukedag = 1
+if ukedag == 1:
+    print("Mandag")
+elif ukedag == 2:
+    print("Tirsdag")
+elif ukedag == 3:
+    print("Onsdag")
+elif ukedag == 4:
+    print("Torsdag")
+elif ukedag == 5:
+    print("Fredag")
+elif ukedag == 6:
+    print("Lørdag")
+elif ukedag == 7:
+    print("Søndag")
+else:
+    print("Hvilken dag er det idag?")
 
 
 # ## Bonus: Vi kaster terning
