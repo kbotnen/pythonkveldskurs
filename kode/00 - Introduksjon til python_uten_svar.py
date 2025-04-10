@@ -4,7 +4,7 @@
 # ## Introduksjon til python
 # Hva er python og hva kan det brukes til?
 # 
-# NITO kveldskurs 02.oktober 2024, Kristian Botnen
+# NITO kveldskurs 10.april 2025, Kristian Botnen
 
 # ## Kalkulator
 
